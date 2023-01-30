@@ -19,7 +19,8 @@ module.exports = {
         "secondary-500": "#191c26",
       },
       boxShadow: {
-        'sm': `0 3px 5px rgb(0 0 0 / 10%)`
+        'sm': `0 3px 5px rgb(0 0 0 / 10%)`,
+        'md': `0 0 10px rgb(0 0 0 / 10%)`,
       },
       backgroundImage: (theme) => ({
         'hero-shape': "url('./assets/background-image.svg')",
@@ -35,14 +36,10 @@ module.exports = {
         montserrat: ["Montserrat", "sans-serif"],
       },
     },
-    variants: {
-      backgroundImage: ['responsive'],
-      maskSize: ['responsive'],
-      maskImage: ['responsive'],
-    },
+    
     fontSize: {
       'xs': ['0.875rem', {
-        lineHeight: '1875rem',
+        lineHeight: '1.875rem',
       }],
       'sm': ['1.375rem', {
         lineHeight: '1.5',
@@ -74,6 +71,24 @@ module.exports = {
       sm: "768px",
       md: "1060px",
     },
+    animation: {
+      '1s': '1s'
+    },
+    fillMode: {
+      'both': 'both',
+    },
+    heyframes: {
+      slideInDown: {
+        '0%' : { transform: 'translate3d(0, -100%, 0)', visibilty: 'visible'},
+        'to' : { transform: 'translateZ(0)'}
+      }
+    }
+  },
+  variants: {
+    backgroundImage: ['responsive'],
+    maskSize: ['responsive'],
+    maskImage: ['responsive'],
+    animation: ['responsive'],
   },
   plugins: [
    

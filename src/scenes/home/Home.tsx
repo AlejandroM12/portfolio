@@ -16,8 +16,8 @@ type Props = {
 const Home = ({setSelectedPage}: Props) => {
   const afterStyle = `absolute after:content-[""] after:w-[1px] after:h-full after:bg-gray-400 after:top-0 after:right-0`
   return (
-    <section id="home" className="bg-gray-50">
-        <motion.div className="flex items-center justify-center flex-col text-center w-full min-h-[100vh] relative"
+    <section id="home" className=" w-full min-h-[100vh] relative bg-gray-50">
+        <motion.div className="flex items-center justify-center flex-col text-center py-[100px] px-[20px]"
             onViewportEnter={() => setSelectedPage(SelectedPage.Home)}
         >
             <div className="w-[245px] h-[245px] mx-auto mb-3.5 mt-0 ">

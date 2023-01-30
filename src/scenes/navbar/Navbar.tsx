@@ -19,18 +19,17 @@ type Props = {
 
 const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }: Props) => {
 
-  const nav ="w-full h-auto static left-0 top-0  bg-transparent z-30 shadow-sm transition-all ease-in-out duration-500"
+  const nav ="w-full h-auto fixed left-0 top-0 bg-gray-20 z-30 transition-all ease-in-out duration-500"
   const flexBetween = "flex items-center justify-between ";
   const [isMenuToggled, setIsMenuToggled] = useState<boolean>(false);
   const isAboveMediumScreens = useMediaQuery("(min-width: 1060px)");
-  const navbarBackground = isTopOfPage ? "" : "bg-primary-100 drop-shadow";
+  const navbarBackground = isTopOfPage ? "" : "bg-gray-20 shadow-md";
 
-  
 
   return (
     <nav className={nav}>
       <div
-        className={`${navbarBackground} ${flexBetween}  h-[80px] px-10 `}
+        className={`${navbarBackground} ${flexBetween} h-[80px] px-10 `}
       >
         <div className="w-full h-auto p-0">
             <img src={Logo} alt="logo" />

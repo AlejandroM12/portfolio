@@ -15,7 +15,7 @@ const Link = ({ page, selectedPage, setSelectedPage, icon, alt }: Props) => {
   const hoverBefore = `content-[""] hover:before:absolute hover:before:w-full hover:before:h-full hover:before:top-0 hover:before:left-0 hover:before:bg-primary-100 hover:before:rounded-md hover:before:z-[-1] hover:before:scale-x-100 hover:before:transition hover:before:transform hover:before:origin-left   hover:before:duration-100`
   return (
     <AnchorLink
-    className={`flex items-center justify-center relative px-[20px] py-[10px] text-sm text-gray-500 font-medium ${selectedPage === lowerCasePage ? `active:before: ${before}` : ""} hover:before:${hoverBefore}`}
+    className={`flex items-center justify-center relative px-[20px] py-[5px] text-xs text-gray-500 font-medium ${selectedPage === lowerCasePage ? `active:before: ${before}` : ""} hover:before:${hoverBefore}`}
       href={`#${lowerCasePage}`}
       onClick={() => setSelectedPage(lowerCasePage)}
     >
