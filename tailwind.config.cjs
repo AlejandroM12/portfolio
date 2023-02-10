@@ -23,7 +23,8 @@ module.exports = {
         'md': `0 0 10px rgb(0 0 0 / 10%)`,
       },
       backgroundImage: (theme) => ({
-        'hero-shape': "url('./assets/background-image.svg')",
+        'about-perfil': "url('./assets/about-image-example.jpg')",
+
       }),
       maskSize: {
         'auto': 'auto'
@@ -38,6 +39,7 @@ module.exports = {
     },
     
     fontSize: {
+      'x': ['0.875rem'],
       'xs': ['0.875rem', {
         lineHeight: '1.875rem',
       }],
@@ -53,14 +55,29 @@ module.exports = {
       'xl': ['1.25rem', {
         lineHeight: '1.5',
       }],
+      'xll': ['0.875rem', {
+        lineHeight: '1.625rem',
+      }],
+      '2xl': ['2.063rem',],
+      '3xl': ['1.563rem', {
+        lineHeight: '1.5',
+      }],
+      '4xl': ['2.188rem', {
+        lineHeight: '1.5',
+      }],
       '5xl': ['2.75rem', {
         lineHeight: '1.2',
       }],
       '6xl': ['2.813rem', {
         lineHeight: '1',
       }],
+      '7xl': ['2.5rem', {
+        lineHeight: '1',
+      }],
+      
     },
     fontWeight: {
+      light: 300,
       normal: 400,
       medium: 500,
       semibold: 600,
@@ -82,6 +99,10 @@ module.exports = {
         '0%' : { transform: 'translate3d(0, -100%, 0)', visibilty: 'visible'},
         'to' : { transform: 'translateZ(0)'}
       }
+    },
+    flex: {
+      '2': '0 0 auto',
+      '3': '0 0 50%',
     }
   },
   variants: {

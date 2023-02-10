@@ -2,7 +2,7 @@ import { SelectedPage } from "@/shared/types";
 import { motion } from "framer-motion";
 import perfilImg from "@/assets/perfil-image-example.webp"
 import webkitImage from "@/assets/background-image.svg"
-import  Typewriter  from 'typewriter-effect';
+import Typewriter  from 'typewriter-effect';
 import linkedinIcon from '@/assets/icons/linkedin.svg'
 import facebookIcon from '@/assets/icons/facebook.svg'
 import instagramIcon from '@/assets/icons/instagram.svg'
