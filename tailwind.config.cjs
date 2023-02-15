@@ -24,7 +24,10 @@ module.exports = {
       },
       backgroundImage: (theme) => ({
         'about-perfil': "url('./assets/about-image-example.jpg')",
-
+        'services-1': "url('./assets/services/services-1.jpg')",
+        'services-2': "url('./assets/services/services-2.jpg')",
+        'services-3': "url('./assets/services/services-3.jpg')",
+        'services-4': "url('./assets/services/services-4.jpg')",
       }),
       maskSize: {
         'auto': 'auto'
@@ -58,6 +61,7 @@ module.exports = {
       'xll': ['0.875rem', {
         lineHeight: '1.625rem',
       }],
+      '1xl': ['1.438rem',],
       '2xl': ['2.063rem',],
       '3xl': ['1.563rem', {
         lineHeight: '1.5',
@@ -88,28 +92,43 @@ module.exports = {
       sm: "768px",
       md: "1060px",
     },
-    animation: {
-      '1s': '1s'
-    },
+    
     fillMode: {
       'both': 'both',
     },
     heyframes: {
-      slideInDown: {
-        '0%' : { transform: 'translate3d(0, -100%, 0)', visibilty: 'visible'},
-        'to' : { transform: 'translateZ(0)'}
-      }
+      slideLeft: {
+        '0%': {
+          opacity: 0,
+          transform: 'translateX(-20px)',
+        },
+        'to': {
+          opacity: 1,
+          transform: 'none',
+        },
+      },
+    },
+    animation: {
+      '1s': '1s',
+      slideLeft: 'slideLeft 1s ease-out',
     },
     flex: {
       '2': '0 0 auto',
       '3': '0 0 50%',
+    },
+    transitionTimingFunction: {
+      'in-expo': 'cubic-bezier(0.03, 0.98, 0.52, 0.99) 0s',
     }
   },
   variants: {
     backgroundImage: ['responsive'],
+    animation: ['responsive', 'hover'],
     maskSize: ['responsive'],
     maskImage: ['responsive'],
     animation: ['responsive'],
+    extend: {
+      content: ['hover'],
+    }
   },
   plugins: [
    

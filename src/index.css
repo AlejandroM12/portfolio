@@ -24,3 +24,86 @@ img {
   vertical-align: middle;
   max-width: 100%;
 }
+.tilt-content::before{
+  position: absolute;
+  content: "";
+  left: 0;
+  top: 0;
+  background: #000;
+  transform: scale(0.9);
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  visibility: hidden;
+  border-radius: inherit;
+  transition: 0.7s;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+.tilt-content:hover::before{
+  transform: scale(1);
+  opacity: 1;
+  visibility: visible;
+}
+.tilt-content:hover img{
+  color: #fff;
+  filter: invert(1);
+  stroke: #fff;
+}
+.tilt-content:hover h3, .tilt-content:hover p {
+  color: #fff;
+}
+.tilt-content:hover .spanBeforeAfter span {
+  width: 30px;
+  background-color: #fff;
+}
+.tilt-content:hover .spanBeforeAfter span:after,
+.tilt-content:hover .spanBeforeAfter span:before {
+  background-color: #fff;
+}
+.tilt-content:hover span, .tilt-content:hover span:before {
+  transition: all 0.7s ease;
+}
+.tilt-content:hover .spanBeforeAfter {
+  color: #fff;
+}
+.tilt-content .spanBeforeAfter span,
+.tilt-content .spanBeforeAfter span:before {
+  position: absolute;
+  height: 2px;
+  background-color: #7e7e7e;
+  border-radius: 50px;
+  transition: all 0.7s ease;
+}
+.tilt-content .spanBeforeAfter span:before {
+  content: "";
+  width: 6px;
+  transform: rotate(45deg);
+  right: 0;
+  top: -2px;
+}
+.tilt-content .spanBeforeAfter span:after {
+  position: absolute;
+  content: "";
+  width: 6px;
+  height: 2px;
+  background-color: #7e7e7e;
+  transform: rotate(-45deg);
+  right: 0;
+  bottom: -2px;
+  border-radius: 50px;
+  transition: all 0.7s ease;
+}
+@keyframes slideLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+.tilt-content:hover .tilt-content-child:first-child {
+  animation: slideLeft 1s ease-out;
+}
