@@ -11,9 +11,9 @@ import { BrandingDesign, MobileApp, MotionWeb, UxUi } from "./LearnMoreInformati
 
 type Props = {
     setSelectedPage: (value: SelectedPage) => void;
-    isOpen: boolean;
-    id: string; 
-    onClick: () => void;
+    isOpen?: boolean;
+    id?: string; 
+    onClick?: () => void;
 }
 
 const Services = ({ setSelectedPage, isOpen, id, onClick }: Props) => {
@@ -74,7 +74,7 @@ const Services = ({ setSelectedPage, isOpen, id, onClick }: Props) => {
         {
             <>
             {activeModal === 'motionWebModal' && (
-              <MotionWeb isOpen={isOpen} onClose={handleCloseModal} />
+              <MotionWeb isOpen={true} onClose={handleCloseModal} />
             )}
             {activeModal === 'uiUxModal' && (
               <UxUi isOpen={true} onClose={handleCloseModal} />
