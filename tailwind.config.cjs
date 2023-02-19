@@ -28,6 +28,11 @@ module.exports = {
         'services-2': "url('./assets/services/services-2.jpg')",
         'services-3': "url('./assets/services/services-3.jpg')",
         'services-4': "url('./assets/services/services-4.jpg')",
+        'portfolio-1': "url('./assets/portfolio/portfolio-image-1.jpg')",
+        'portfolio-2': "url('./assets/portfolio/portfolio-image-2.jpg')",
+        'portfolio-3': "url('./assets/portfolio/portfolio-image-3.jpg')",
+        'portfolio-4': "url('./assets/portfolio/portfolio-image-4.jpg')",
+        'portfolio-5': "url('./assets/portfolio/portfolio-image-5.jpg')",
       }),
       maskSize: {
         'auto': 'auto'
@@ -115,6 +120,8 @@ module.exports = {
     flex: {
       '2': '0 0 auto',
       '3': '0 0 50%',
+      '4': '0 0 75%',
+      '5': '0 0 25%',
     },
     transitionTimingFunction: {
       'in-expo': 'cubic-bezier(0.03, 0.98, 0.52, 0.99) 0s',
