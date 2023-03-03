@@ -122,9 +122,15 @@ module.exports = {
       '3': '0 0 50%',
       '4': '0 0 75%',
       '5': '0 0 25%',
+      '6': '1 1',
     },
     transitionTimingFunction: {
       'in-expo': 'cubic-bezier(0.03, 0.98, 0.52, 0.99) 0s',
+    },
+    filter: {
+      grayscale :{
+        100: 'grayscale(1)',
+      }
     }
   },
   variants: {
